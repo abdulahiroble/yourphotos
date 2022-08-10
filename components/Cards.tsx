@@ -21,11 +21,11 @@ export default function Cards({profile, profilePhotos}: any) {
 
     };
 
-    const ColorMode = () => {
+    let colorMode = () => {
         if (isActive) {
-            useColorModeValue('#1D5D8D', 'gray.900')
+            return useColorModeValue('#1D5D8D', 'gray.900')
         } else {
-            useColorModeValue('#151f21', 'gray.900')
+            return useColorModeValue('#151f21', 'gray.900')
         }
     }
 
@@ -88,7 +88,7 @@ export default function Cards({profile, profilePhotos}: any) {
                     <Button
                         w={'full'}
                         mt={8}
-                        bg={ColorMode()}
+                        bg={colorMode()}
                         color={'white'}
                         rounded={'md'}
                         onClick={handleClick}
