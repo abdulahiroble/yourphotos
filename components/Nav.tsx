@@ -44,7 +44,7 @@ export default function Nav() {
 
     return (
         <>
-            <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+            <Box bg={useColorModeValue('white', 'white')} px={4}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
                     <Logo />
                     <Flex alignItems={'center'}>
@@ -76,7 +76,6 @@ export default function Nav() {
                                     </Center>
                                     <br />
                                     <MenuDivider />
-                                    <MenuItem>Your Servers</MenuItem>
                                     <MenuItem>Account Settings</MenuItem>
                                     <MenuItem>Logout</MenuItem>
                                 </MenuList>
