@@ -21,14 +21,6 @@ export default function Cards({profile, profilePhotos}: any) {
 
     };
 
-    let colorMode = () => {
-        if (isActive) {
-            return useColorModeValue('#1D5D8D', 'gray.900')
-        } else {
-            return useColorModeValue('#151f21', 'gray.900')
-        }
-    }
-
     const photos = profilePhotos?.map((photos: {
         urls: any; id: any
     }) => photos.urls.small);
@@ -88,8 +80,8 @@ export default function Cards({profile, profilePhotos}: any) {
                     <Button
                         w={'full'}
                         mt={8}
-                        bg={colorMode()}
                         color={'white'}
+                        bg={useColorModeValue('gray.700', 'gray.800')}
                         rounded={'md'}
                         onClick={handleClick}
                         _hover={{
