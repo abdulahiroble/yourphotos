@@ -10,15 +10,16 @@ import {
     Button,
     useColorModeValue,
 } from '@chakra-ui/react';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
 export default function Cards({profile, profilePhotos}: any) {
+
     const [isActive, setIsActive] = useState(false);
 
     const handleClick = () => {
         setIsActive(current => !current);
-    };
 
+    };
 
     const photos = profilePhotos?.map((photos: {
         urls: any; id: any
@@ -79,7 +80,7 @@ export default function Cards({profile, profilePhotos}: any) {
                     <Button
                         w={'full'}
                         mt={8}
-                        bg={isActive ? useColorModeValue('#1D5D8D', 'gray.900') : useColorModeValue('#151f21', 'gray.900')}
+                        // bg={isActive ? useColorModeValue('#1D5D8D', 'gray.900') : useColorModeValue('#151f21', 'gray.900')}
                         color={'white'}
                         rounded={'md'}
                         onClick={handleClick}
